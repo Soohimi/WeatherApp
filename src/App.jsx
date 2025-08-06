@@ -3,7 +3,7 @@ import WeatherDisplay from "./components/WeatherDisplay";
 import useWeather from "./components/useWeather";
 import { countryNames } from "./components/countryNames";
 import { useState } from "react";
-
+import './App.css';
 function App() {
   const [city, setCity] = useState("");
   const { weather, loading, error, fetchWeather } = useWeather();
@@ -15,6 +15,7 @@ function App() {
   return (
     <div>
       <h1>وضعیت آب‌وهوا</h1>
+
 
       <CityInput 
         city={city}
