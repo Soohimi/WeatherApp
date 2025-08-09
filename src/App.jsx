@@ -3,7 +3,9 @@ import WeatherDisplay from "./components/WeatherDisplay";
 import useWeather from "./components/useWeather";
 import { countryNames } from "./components/countryNames";
 import { useState } from "react";
-import './App.css';
+import "./App.css";
+import Sidebar from "./components/layout/Sidebar";
+import Header from "./components/layout/Header";
 function App() {
   const [city, setCity] = useState("");
   const { weather, loading, error, fetchWeather } = useWeather();
@@ -13,18 +15,27 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>وضعیت آب‌وهوا</h1>
+    <div className="h-screen bg-black text-white flex flex-col">
+      <Header />
 
+      <div className="flex flex-1" dir="ltr">
+        <Sidebar />
 
-      <CityInput 
-        city={city}
-        setCity={setCity}
-        onFetch={handleFetch}
-        loading={loading}
-      />
-        {error && <p></p>}
-      <WeatherDisplay weather={weather} />
+        {/* Center content area */}
+        <div
+          className="flex-1 flex flex-col items-center justify-center p-8"
+          dir="rtl"
+        >
+          <CityInput
+            city={city}
+            setCity={setCity}
+            onFetch={handleFetch}
+            loading={loading}
+          />
+          {error && <p className="text-red-500 mt-4">{error}</p>}
+          <WeatherDisplay weather={weather} />
+        </div>
+      </div>
     </div>
   );
 }
