@@ -15,15 +15,15 @@ function App() {
   };
 
   return (
-    <div className="h-screen bg-black text-white flex flex-col">
-      <Header />
+    <div className="h-screen bg-black text-white flex" dir="ltr">
+      <Sidebar />
 
-      <div className="flex flex-1" dir="ltr">
-        <Sidebar />
+      <div className="flex-1 flex flex-col">
+        <Header />
 
         {/* Center content area */}
         <div
-          className="flex-1 flex flex-col items-center justify-center p-8"
+          className="flex-1 flex flex-col items-center justify-center p-8 bg-[#181818] m-8"
           dir="rtl"
         >
           <CityInput

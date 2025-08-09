@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <div className="flex justify-between items-center p-4 bg-slate-800 text-white w-full">
+    <div className="flex justify-between items-center px-8 pt-4 mt-8 bg-black text-white w-full">
       <div>
         <h1 className="text-xl font-semibold">Good Morning, Soheil!</h1>
         <p className="text-sm text-slate-300">Wednesday, 05 Feb, 2025</p>
