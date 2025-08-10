@@ -3,9 +3,11 @@ import WeatherDisplay from "./components/WeatherDisplay";
 import useWeather from "./components/useWeather";
 import { countryNames } from "./components/countryNames";
 import { useState } from "react";
+import WeatherCard from "./components/weather/WeatherCard";
 import "./App.css";
 import Sidebar from "./components/layout/Sidebar";
 import Header from "./components/layout/Header";
+
 function App() {
   const [city, setCity] = useState("");
   const { weather, loading, error, fetchWeather } = useWeather();
@@ -23,17 +25,18 @@ function App() {
 
         {/* Center content area */}
         <div
-          className="flex-1 flex flex-col items-center justify-center p-8 bg-[#181818] m-8"
-          dir="rtl"
+          className="flex-1 flex flex-col  justify-center p-8 bg-[#181818] m-8"
+          dir="ltr"
         >
-          <CityInput
+          {/* <CityInput
             city={city}
             setCity={setCity}
             onFetch={handleFetch}
             loading={loading}
           />
           {error && <p className="text-red-500 mt-4">{error}</p>}
-          <WeatherDisplay weather={weather} />
+          <WeatherDisplay weather={weather} /> */}
+          <WeatherCard />
         </div>
       </div>
     </div>
