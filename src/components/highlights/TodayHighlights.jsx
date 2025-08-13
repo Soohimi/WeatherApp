@@ -8,14 +8,26 @@ import WindCard from "./WindCard";
 function TodayHighlights() {
   return (
     <>
-      <div className="pt-6 pl-6 text-xl">Today's Highlight</div>
-      <div className="grid grid-cols-3 gap-4  p-4 justify-between items-center w-full h-[370px]">
-        <UVIndexCard className="bg-[#444444] text-white  rounded-xl text-center" />
-        <HumidityCard className="bg-[#444444] text-white  rounded-xl text-center" />
-        <SunCard className="bg-[#444444] text-white  rounded-xl text-center" />
-        <SunCard className="bg-[#444444] text-white  rounded-xl text-center" />
-        <VisibilityCard className="bg-[#444444] text-white  rounded-xl text-center" />
-        <WindCard className="bg-[#444444] text-white  rounded-xl text-center" />
+      <div className="pt-6 pl-6 text-xl">Today's Highlights</div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+        <SunCard
+          className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
+          image="Sunrise"
+          title="sunrise"
+          description="6:41 Am"
+        />
+        <WindCard className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]" />
+        <HumidityCard className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]" />
+        <SunCard
+          className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
+          image="Sunset"
+          title="sunset"
+          description="6:35 Am"
+        />
+        <UVIndexCard className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]" />
+
+        <VisibilityCard className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]" />
       </div>
     </>
   );

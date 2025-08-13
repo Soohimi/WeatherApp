@@ -12,9 +12,9 @@ import React from "react";
 function UVIndexCard() {
   return (
     <>
-      <Card className="w-full h-full bg-[#181818] border border-[#444444]">
+      <Card className="flex flex-col items-center justify-center w-full h-full bg-[#232323] text-white">
         <CardHeader>
-          <CardTitle className="text-xl">UVIndexCard</CardTitle>
+          <CardTitle className="text-sm">UVIndexCard</CardTitle>
         </CardHeader>
       </Card>
     </>
