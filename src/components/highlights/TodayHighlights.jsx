@@ -31,7 +31,10 @@ function TodayHighlights() {
           title="sunset"
           description={weather?.sunset}
         />
-        <FeelsLike className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]" />
+        <FeelsLike
+          className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
+          title={weather?.FeelsLike}
+        />
 
         <VisibilityCard className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]" />
       </div>

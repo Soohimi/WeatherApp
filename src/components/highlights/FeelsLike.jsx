@@ -9,7 +9,7 @@ import {
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar.jsx";
 import React from "react";
 
-function FeelsLike() {
+function FeelsLike({ feelsLike }) {
   return (
     <>
       <Card className="grid grid-rows-3 place-items-center w-full h-full bg-[#232323] text-white">
@@ -22,7 +22,7 @@ function FeelsLike() {
 
         <CardDescription className="flex items-center justify-center">
           <div className="text-white pt-4 pb-4">
-            <span className="text-2xl font-bold">5.6</span>
+            <span className="text-2xl font-bold">{title}</span>
             <span className="text-l"> °C</span>
           </div>
         </CardDescription>
