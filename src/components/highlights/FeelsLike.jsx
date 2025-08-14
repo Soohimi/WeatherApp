@@ -9,7 +9,7 @@ import {
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar.jsx";
 import React from "react";
 
-function FeelsLike({ feelsLike }) {
+function FeelsLike({ title }) {
   return (
     <>
       <Card className="grid grid-rows-3 place-items-center w-full h-full bg-[#232323] text-white">

@@ -36,7 +36,10 @@ function TodayHighlights() {
           title={weather?.FeelsLike}
         />
 
-        <VisibilityCard className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]" />
+        <VisibilityCard
+          className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
+          title={weather?.Visibility}
+        />
       </div>
     </>
   );
