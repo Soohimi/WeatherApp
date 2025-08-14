@@ -24,8 +24,9 @@ function HumidityCard() {
           <CardTitle className="text-xs m-0">Humidity</CardTitle>
         </CardHeader>
 
-        <CardDescription className="flex items-center justify-center">
-          <div className="text-2xl text-white pt-4 pb-4 font-bold">85%</div>
+        <CardDescription className="text-white pt-4 pb-4">
+          <span className="text-2xl font-bold">85</span>
+          <span className="text-l"> %</span>
         </CardDescription>
 
         <CardContent className="flex items-center justify-center">

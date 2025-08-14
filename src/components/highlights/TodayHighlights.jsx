@@ -4,8 +4,11 @@ import HumidityCard from "./HumidityCard";
 import SunCard from "./SunCard";
 import VisibilityCard from "./VisibilityCard";
 import WindCard from "./WindCard";
+import useWeather from "../useWeather";
 
 function TodayHighlights() {
+  const { weather } = useWeather();
+
   return (
     <>
       <div className="pt-6 pl-6 text-xl">Today's Highlights</div>
@@ -15,7 +18,7 @@ function TodayHighlights() {
           className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
           image="Sunrise"
           title="sunrise"
-          description="6:41 Am"
+          description={weather?.sunrise}
         />
         <WindCard className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]" />
         <HumidityCard className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]" />
@@ -23,7 +26,7 @@ function TodayHighlights() {
           className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
           image="Sunset"
           title="sunset"
-          description="6:35 Am"
+          description={weather?.sunset}
         />
         <UVIndexCard className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]" />
 

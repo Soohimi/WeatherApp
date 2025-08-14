@@ -25,8 +25,9 @@ function WindCard() {
         </CardHeader>
 
         <CardDescription className="flex items-center justify-center">
-          <div className="text-2xl text-white pt-4 pb-4 font-bold">
-            7.9 Km/h
+          <div className="text-white pt-4 pb-4">
+            <span className="text-2xl font-bold">7.9</span>
+            <span className="text-l"> km/h</span>
           </div>
         </CardDescription>
 

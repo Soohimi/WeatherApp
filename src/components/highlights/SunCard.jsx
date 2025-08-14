@@ -7,6 +7,7 @@ import {
   CardContent,
 } from "../ui/card.jsx";
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar.jsx";
+import useWeather from "../useWeather.js";
 import React from "react";
 
 function SunCard({ title, description, image }) {

@@ -27,6 +27,15 @@ function useWeather() {
       const temp = data.main.temp;
       const icon = data.weather[0].icon;
       const description = data.weather[0].description;
+      const sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
+      const sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
 
       setWeather({
         city: data.name,
@@ -34,6 +43,8 @@ function useWeather() {
         temp,
         icon,
         description,
+        sunrise,
+        sunset,
       });
     } catch (err) {
       setError(err.message);
