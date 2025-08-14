@@ -1,5 +1,5 @@
 import React from "react";
-import UVIndexCard from "./UVIndexCard";
+import FeelsLike from "./FeelsLike";
 import HumidityCard from "./HumidityCard";
 import SunCard from "./SunCard";
 import VisibilityCard from "./VisibilityCard";
@@ -21,14 +21,17 @@ function TodayHighlights() {
           description={weather?.sunrise}
         />
         <WindCard className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]" />
-        <HumidityCard className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]" />
+        <HumidityCard
+          className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
+          title={weather?.humidity}
+        />
         <SunCard
           className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
           image="Sunset"
           title="sunset"
           description={weather?.sunset}
         />
-        <UVIndexCard className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]" />
+        <FeelsLike className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]" />
 
         <VisibilityCard className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]" />
       </div>

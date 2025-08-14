@@ -9,7 +9,7 @@ import {
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar.jsx";
 import React from "react";
 
-function HumidityCard() {
+function HumidityCard({ title }) {
   return (
     <>
       <Card className="grid grid-rows-3 place-items-center w-full h-full bg-[#232323] text-white">
@@ -25,7 +25,7 @@ function HumidityCard() {
         </CardHeader>
 
         <CardDescription className="text-white pt-4 pb-4">
-          <span className="text-2xl font-bold">85</span>
+          <span className="text-2xl font-bold">{title}</span>
           <span className="text-l"> %</span>
         </CardDescription>
 

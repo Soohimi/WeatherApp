@@ -31,11 +31,15 @@ function useWeather() {
         hour: "2-digit",
         minute: "2-digit",
       });
-
       const sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString([], {
         hour: "2-digit",
         minute: "2-digit",
       });
+      const feelsLike =
+        data.main.feels_like !== undefined ? data.main.feels_like : temp;
+      const humidity = data.main.humidity ?? "N/A";
+      const visibility = (data.visibility / 1000).toFixed(1);
+      const windSpeed = (data.wind.speed * 3.6).toFixed(1);
 
       setWeather({
         city: data.name,
@@ -45,6 +49,10 @@ function useWeather() {
         description,
         sunrise,
         sunset,
+        feelsLike,
+        humidity,
+        visibility,
+        windSpeed,
       });
     } catch (err) {
       setError(err.message);
