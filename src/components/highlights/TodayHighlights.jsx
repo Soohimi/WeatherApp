@@ -20,7 +20,10 @@ function TodayHighlights() {
           title="sunrise"
           description={weather?.sunrise}
         />
-        <WindCard className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]" />
+        <WindCard
+          className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
+          title={weather?.windSpeed}
+        />
         <HumidityCard
           className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
           title={weather?.humidity}

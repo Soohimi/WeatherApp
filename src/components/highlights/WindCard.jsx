@@ -9,7 +9,7 @@ import {
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar.jsx";
 import React from "react";
 
-function WindCard() {
+function WindCard({ title }) {
   return (
     <>
       <Card className="grid grid-rows-3 place-items-center w-full h-full bg-[#232323] text-white">
@@ -26,7 +26,7 @@ function WindCard() {
 
         <CardDescription className="flex items-center justify-center">
           <div className="text-white pt-4 pb-4">
-            <span className="text-2xl font-bold">7.9</span>
+            <span className="text-2xl font-bold">{title}</span>
             <span className="text-l"> km/h</span>
           </div>
         </CardDescription>
