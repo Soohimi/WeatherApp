@@ -1,15 +1,20 @@
+import SearchIcon from "../Search";
+
 export default function Header() {
   return (
     <div className="flex justify-between items-center px-8 pt-4 mt-8 bg-black text-white w-full">
       <div>
-        <h1 className="text-xl font-semibold">Good Morning, Soheil!</h1>
-        <p className="text-sm text-slate-300">Wednesday, 05 Feb, 2025</p>
+        <h1 className="text-sm text-slate-300">Hi, Soheil!</h1>
+        <p className="text-xl font-semibold">Good Morning</p>
       </div>
       <div className="flex gap-4 items-center">
-        <button className="hover:bg-slate-700 px-2 py-1 rounded">°C</button>
-        <button className="hover:bg-slate-700 px-2 py-1 rounded">🔍</button>
-        <button className="hover:bg-slate-700 px-2 py-1 rounded">🔔</button>
-        <div className="w-8 h-8 rounded-full bg-slate-500"></div>
+        <div></div>
+        <div>
+          <SearchIcon />
+        </div>
+        <div className="w-14 h-14 rounded-full">
+          <img src="/icons/Profile.svg" alt="mountain sunset" />
+        </div>
       </div>
     </div>
   );
