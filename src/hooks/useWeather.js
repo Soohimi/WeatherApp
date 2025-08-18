@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { countryNames } from "./countryNames";
+import { countryNames } from "../components/countryNames";
 
 function useWeather() {
   const [weather, setWeather] = useState(null);

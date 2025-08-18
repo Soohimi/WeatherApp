@@ -1,10 +1,10 @@
 import React from "react";
+import SunCard from "./SunCard";
+import WindCard from "./WindCard";
 import FeelsLike from "./FeelsLike";
 import HumidityCard from "./HumidityCard";
-import SunCard from "./SunCard";
+import useWeather from "../../hooks/useWeather";
 import VisibilityCard from "./VisibilityCard";
-import WindCard from "./WindCard";
-import useWeather from "../useWeather";
 
 function TodayHighlights() {
   const { weather } = useWeather();

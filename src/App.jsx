@@ -1,6 +1,6 @@
 import CityInput from "./components/CityInput";
 import WeatherDisplay from "./components/WeatherDisplay";
-import useWeather from "./components/useWeather";
+import useWeather from "./hooks/useWeather";
 import { countryNames } from "./components/countryNames";
 import { useState } from "react";
 import WeatherCard from "./components/weather/WeatherCard";
@@ -18,7 +18,9 @@ function App() {
 
   return (
     <div className="h-screen bg-black text-white flex" dir="ltr">
-      <Sidebar />
+      <div>
+        <Sidebar />
+      </div>
 
       <div className="flex-1 flex flex-col">
         <Header />

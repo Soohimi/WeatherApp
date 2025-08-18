@@ -1,8 +1,11 @@
 import React from "react";
 import SearchIcon from "../search";
+import useWeather from "../../hooks/useWeather";
 import TodayHighlights from "../highlights/TodayHighlights";
 
 function WeatherCard() {
+  const { weather } = useWeather();
+
   return (
     <div
       className="flex flex-col justify-start items-start px-4 pt-4 mt-[0px] bg-black text-white w-[50%] h-[100%] rounded-3xl border border-[#444444]"
