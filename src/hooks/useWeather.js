@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 import { countryNames } from "../components/countryNames";
 
 function useWeather() {
@@ -15,13 +16,10 @@ function useWeather() {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=fa`;
 
     try {
-      const response = await fetch(url);
-      if (!response.ok) throw new Error("شهر پیدا نشد");
-
-      const data = await response.json();
+      const response = await axios.get(url);
+      const data = response.data;
 
       const countryCode = data.sys.country;
-
       const country = countryNames[countryCode] || countryCode;
 
       const temp = data.main.temp;
@@ -55,11 +53,12 @@ function useWeather() {
         windSpeed,
       });
     } catch (err) {
-      setError(err.message);
+      setError(err.response?.data?.message || err.message);
     } finally {
       setLoading(false);
     }
   };
+
   return {
     weather,
     loading,

@@ -7,6 +7,7 @@ import WeatherCard from "./components/weather/WeatherCard";
 import "./App.css";
 import Sidebar from "./components/layout/Sidebar";
 import Header from "./components/layout/Header";
+import MainContent from "./components/layout/MainContainer";
 
 function App() {
   const [city, setCity] = useState("");
@@ -27,7 +28,7 @@ function App() {
 
         {/* Center content area */}
         <div
-          className="flex-1 flex flex-col  justify-center  h-[calc(100vh-44px)] mb-[44px] bg-[#181818] m-2"
+          className="flex-1 flex flex-col  justify-center  h-[calc(100vh-44px)] mb-[44px] m-2"
           dir="ltr"
         >
           {/* <CityInput
@@ -38,7 +39,7 @@ function App() {
           />
           {error && <p className="text-red-500 mt-4">{error}</p>}
           <WeatherDisplay weather={weather} /> */}
-          <WeatherCard />
+          <MainContent />
         </div>
       </div>
     </div>
