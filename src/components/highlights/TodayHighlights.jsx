@@ -11,15 +11,14 @@ function TodayHighlights() {
 
   return (
     <>
-      <div className="pt-6 pl-6 text-xl">Today's Highlights</div>
+      <div className="pl-6 text-xl">Today's Highlights</div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
-        <SunCard
-          className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
-          image="Sunrise"
-          title="sunrise"
-          description={weather?.sunrise}
-        />
+      <div
+        className="grid gap-[18px] p-6"
+        style={{
+          gridTemplateColumns: "25.45% 25.45% 43.27%",
+        }}
+      >
         <WindCard
           className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
           title={weather?.windSpeed}
@@ -30,18 +29,23 @@ function TodayHighlights() {
         />
         <SunCard
           className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
-          image="Sunset"
-          title="sunset"
-          description={weather?.sunset}
+          image="Sunrise"
+          title="sunrise"
+          description={weather?.sunrise}
         />
         <FeelsLike
           className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
           title={weather?.FeelsLike}
         />
-
         <VisibilityCard
           className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
           title={weather?.Visibility}
+        />
+        <SunCard
+          className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
+          image="Sunset"
+          title="sunset"
+          description={weather?.sunset}
         />
       </div>
     </>

@@ -12,8 +12,8 @@ import React from "react";
 function WindCard({ title }) {
   return (
     <>
-      <Card className="grid grid-rows-3 place-items-center w-full h-full bg-[#232323] text-white">
-        <CardHeader className="flex flex-row items-center justify-center gap-2">
+      <Card className="grid grid-rows-3  w-full h-full bg-[#232323] text-white gap-[16px] p-[16px]">
+        <CardHeader className="flex flex-row items-center justify-around gap-2">
           <Avatar>
             <AvatarImage
               src="/icons/Visibility Icon 1.svg"
@@ -21,18 +21,18 @@ function WindCard({ title }) {
               className="h-6 w-6"
             />
           </Avatar>
-          <CardTitle className="text-xs m-0">WindCard</CardTitle>
+          <CardTitle className="text-l">WindCard</CardTitle>
         </CardHeader>
 
-        <CardDescription className="flex items-center justify-center">
-          <div className="text-white pt-4 pb-4">
-            <span className="text-2xl font-bold">{title}</span>
+        <CardDescription className="flex items-center justify-end">
+          <div className="text-white">
+            <span className="text-2xl font-bold">{title}52</span>
             <span className="text-l"> km/h</span>
           </div>
         </CardDescription>
 
-        <CardContent className="flex items-center justify-center">
-          <div className="text-l text-white">6:49 Am</div>
+        <CardContent className="flex items-center justify-end">
+          <div className="text-xs text-white">6:49 Am</div>
         </CardContent>
       </Card>
     </>
