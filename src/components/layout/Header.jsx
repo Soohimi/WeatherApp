@@ -2,7 +2,7 @@ import SearchIcon from "../Search";
 
 export default function Header() {
   return (
-    <div className="flex justify-between items-center px-8 pt-4 mt-8 mb-6 h-[56px] bg-black text-white w-full">
+    <div className="flex justify-between items-center px-8 pt-4 mt-8 mb-6 h-[3.5rem] bg-black text-white w-full">
       <div>
         <h1 className="text-sm text-slate-300">Hi, Soheil!</h1>
         <p className="text-xl font-semibold">Good Morning</p>

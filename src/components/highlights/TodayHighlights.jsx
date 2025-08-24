@@ -14,7 +14,7 @@ function TodayHighlights() {
       <div className="pl-6 text-xl">Today's Highlights</div>
 
       <div
-        className="grid gap-[18px] p-6"
+        className="grid gap-[4.13%] p-6"
         style={{
           gridTemplateColumns: "25.45% 25.45% 43.27%",
         }}

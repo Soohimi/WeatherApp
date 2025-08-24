@@ -2,7 +2,7 @@ import TodayHighlights from "../highlights/TodayHighlights";
 
 export default function MainContent() {
   return (
-    <main className="grid grid-cols-1 lg:grid-cols-2 gap-6 rounded-2xl flex-1 h-[732px]">
+    <main className="grid grid-cols-1 lg:grid-cols-2 gap-6 rounded-2xl flex-1 h-[45.75rem]">
       {/* Left Column */}
       <div className="flex flex-col gap-6">
         {/* Current Weather */}

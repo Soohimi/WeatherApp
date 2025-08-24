@@ -12,7 +12,7 @@ import React from "react";
 function SunCard({ title, description, image }) {
   return (
     <>
-      <Card className="grid grid-rows-3 place-items-center w-full h-full bg-[#232323] text-white">
+      <Card className="grid grid-rows-3 place-items-center w-full [90%] bg-[#232323] text-white">
         <CardHeader className="items-center justify-center">
           <Avatar>
             <AvatarImage

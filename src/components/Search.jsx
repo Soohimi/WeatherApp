@@ -21,7 +21,7 @@ function SearchIcon() {
         </>
       ) : (
         <Search
-          className="w-11 h-11 cursor-pointer border border-[rgba(94,94,94,1)] text-[rgba(94,94,94,1)] rounded-full p-[12px]"
+          className="w-11 h-11 cursor-pointer border border-[rgba(94,94,94,1)] text-[rgba(94,94,94,1)] rounded-full p-[0.75rem]"
           onClick={() => setShowSearch(true)}
         />
       )}
