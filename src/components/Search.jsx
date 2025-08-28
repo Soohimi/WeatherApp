@@ -11,17 +11,17 @@ function SearchIcon() {
         <>
           <Input
             placeholder="Search city..."
-            className="bg-[rgba(30,30,30,1)] border-none text-[rgba(94,94,94,1)] placeholder:text-[rgba(94,94,94,1)] transition-all duration-300"
+            className="bg-[rgba(30,30,30,1)] border border-[#444444] text-white placeholder:text-[rgba(150,150,150,1)] transition-all duration-300 rounded-xl shadow-lg focus:border-[#555555] focus:ring-2 focus:ring-[#555555]/20"
             autoFocus
           />
           <X
-            className="w-5 h-5 cursor-pointer text-[rgba(94,94,94,1)]"
+            className="w-5 h-5 cursor-pointer text-[rgba(150,150,150,1)] hover:text-white transition-colors duration-200"
             onClick={() => setShowSearch(false)}
           />
         </>
       ) : (
         <Search
-          className="w-11 h-11 cursor-pointer border border-[rgba(94,94,94,1)] text-[rgba(94,94,94,1)] rounded-full p-[0.75rem]"
+          className="w-11 h-11 cursor-pointer border border-[rgba(94,94,94,1)] text-[rgba(94,94,94,1)] rounded-full p-[0.75rem] hover:border-[#555555] hover:text-[#555555] hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
           onClick={() => setShowSearch(true)}
         />
       )}
@@ -30,3 +30,4 @@ function SearchIcon() {
 }
 
 export default SearchIcon;
+

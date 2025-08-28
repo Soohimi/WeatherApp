@@ -12,25 +12,25 @@ import React from "react";
 function FeelsLike({ title }) {
   return (
     <>
-      <Card className="grid grid-rows-3 place-items-center w-full h-[90%] bg-[#232323] text-white">
-        <CardHeader className="flex flex-row items-center justify-center gap-2">
+      <Card className="grid grid-rows-3 w-full h-full bg-[#232323] text-white rounded-lg sm:rounded-xl md:rounded-2xl p-0.5 sm:p-1 md:p-2 lg:p-3">
+      <CardHeader className="flex flex-row items-center justify-center gap-0.5 w-full">
           <Avatar>
-            <AvatarImage src="/" alt="" className="h-6 w-6" />
+            <AvatarImage src="/" alt="" className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4 lg:h-5 lg:w-5" />
           </Avatar>
-          <CardTitle className="text-base sm:text-lg md:text-xl lg:text-2xl">
-            Feels like
+          <CardTitle className="text-xs sm:text-sm md:text-base lg:text-lg text-white">
+            UV Index
           </CardTitle>
         </CardHeader>
 
-        <CardDescription className="flex items-center justify-center">
-          <div className="text-white pt-4 pb-4">
-            <span className="text-2xl font-bold">{title}</span>
-            <span className="text-sm"> °C</span>
+        <CardDescription className="flex items-center justify-end">
+          <div className="text-white pt-0 pb-0">
+            <span className="text-xs sm:text-sm md:text-base lg:text-lg font-bold">{title}</span>
+            <span className="text-xs sm:text-sm md:text-base"> uv</span>
           </div>
         </CardDescription>
 
-        <CardContent className="flex items-center justify-center">
-          <div className="text-l text-white">6:49 Am</div>
+        <CardContent className="flex items-center justify-end">
+          <div className="text-xs sm:text-sm md:text-base text-white">Moderate UV</div>
         </CardContent>
       </Card>
     </>

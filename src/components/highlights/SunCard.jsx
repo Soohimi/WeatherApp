@@ -1,37 +1,27 @@
-import {
-  Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
-  CardDescription,
-  CardContent,
-} from "../ui/card.jsx";
-import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar.jsx";
+import { Card, CardHeader, CardContent, CardDescription } from "../ui/card.jsx";
+import { Avatar, AvatarImage } from "../ui/avatar.jsx";
 import React from "react";
 
 function SunCard({ title, description, image }) {
   return (
-    <>
-      <Card className="grid grid-rows-3 place-items-center w-full [90%] bg-[#232323] text-white">
-        <CardHeader className="items-center justify-center">
-          <Avatar>
-            <AvatarImage
-              src={`/icons/${image}.svg`}
-              alt="Raindrop image"
-              className="h-12 w-12"
-            />
-          </Avatar>
-        </CardHeader>
+    <Card className="flex items-center w-full h-full bg-[#232323] text-white p-0.5 sm:p-1 md:p-2 lg:p-3 rounded-lg sm:rounded-xl md:rounded-2xl">
+      <CardHeader className="flex items-center justify-center p-0 mr-0.5 sm:mr-1 md:mr-2 lg:mr-3">
+        <Avatar className="h-4 w-4 sm:h-6 sm:w-6 md:h-8 md:w-8 lg:h-10 lg:w-10 xl:h-12 xl:w-12">
+          <AvatarImage
+            src={`/icons/${image}.svg`}
+            alt="icon"
+            className="h-3 w-3 sm:h-4 sm:w-4 md:h-6 md:w-6 lg:h-8 lg:w-8 xl:h-10 xl:w-10"
+          />
+        </Avatar>
+      </CardHeader>
 
-        <CardDescription className="flex items-center justify-center">
-          <div className="text-xl text-white font-bold">{title}</div>
+      <CardContent className="flex flex-col justify-center gap-0 p-0">
+        <div className="text-xs sm:text-sm md:text-base lg:text-lg font-bold">{title}</div>
+        <CardDescription className="text-xs sm:text-sm text-gray-300">
+          {description}
         </CardDescription>
-
-        <CardContent className="flex items-center justify-center">
-          <div className="text-xs text-white text-center	">{description}</div>
-        </CardContent>
-      </Card>
-    </>
+      </CardContent>
+    </Card>
   );
 }
 

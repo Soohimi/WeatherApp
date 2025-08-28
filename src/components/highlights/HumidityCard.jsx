@@ -12,27 +12,28 @@ import React from "react";
 function HumidityCard({ title }) {
   return (
     <>
-      <Card className="grid grid-rows-3 place-items-center w-full h-[90%] bg-[#232323] text-white">
-        <CardHeader className="flex flex-row items-center justify-center">
+      <Card className="grid grid-rows-3 w-full h-full bg-[#232323] text-white rounded-lg sm:rounded-xl md:rounded-2xl p-0.5 sm:p-1 md:p-2 lg:p-3">
+      <CardHeader className="flex flex-row items-center justify-around gap-0.5 w-full">
           <Avatar>
             <AvatarImage
               src="/icons/Raindrops.svg"
               alt="Raindrop image"
-              className="h-6 w-6 flex items-center justify-center"
+              className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4 lg:h-5 lg:w-5 flex items-center justify-end"
             />
           </Avatar>
-          <CardTitle className="text-base sm:text-lg md:text-xl lg:text-2xl ">
+          <CardTitle className="text-xs sm:text-sm md:text-base lg:text-lg text-white">
             Humidity
           </CardTitle>
         </CardHeader>
 
-        <CardDescription className="text-white">
-          <span className="text-2xl font-bold">{title}</span>
-          <span className="text-sm"> %</span>
-        </CardDescription>
+        <CardDescription className="flex items-center justify-end">
+          <span className="text-xs sm:text-sm md:text-base lg:text-lg font-bold">{title}</span>
+          <span className="text-xs sm:text-sm md:text-base text-gray-300 ml-1">
+              %
+            </span>        </CardDescription>
 
-        <CardContent className="flex items-center justify-center">
-          <div className="text-xs text-white text-center	">Humidity is good</div>
+        <CardContent className="flex items-center justify-end">
+          <div className="text-xs text-white text-center">Humidity is good</div>
         </CardContent>
       </Card>
     </>

@@ -11,38 +11,23 @@ function TodayHighlights() {
 
   return (
     <>
-      <div className="pl-6 text-xl">Today's Highlights</div>
+      <div className="pl-2 sm:pl-4 md:pl-6 pt-2 sm:pt-4 md:pt-6">
+        <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white">
+          Today's Highlights
+        </h2>
+      </div>
 
-      <div
-        className="grid gap-[4.13%] p-6"
-        style={{
-          gridTemplateColumns: "25.45% 25.45% 43.27%",
-        }}
-      >
-        <WindCard
-          className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
-          title={weather?.windSpeed}
-        />
-        <HumidityCard
-          className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
-          title={weather?.humidity}
-        />
+      <div className="grid gap-0.5 sm:gap-1 md:gap-2 lg:gap-3 p-1 sm:p-2 md:p-3 lg:p-4 w-full max-w-full overflow-hidden" style={{ gridTemplateColumns: "1fr 1fr 1.5fr", gridTemplateRows: "1fr 1fr" }}>
+        <WindCard title={weather?.windSpeed} />
+        <HumidityCard title={weather?.humidity} />
         <SunCard
-          className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
           image="Sunrise"
           title="sunrise"
           description={weather?.sunrise}
         />
-        <FeelsLike
-          className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
-          title={weather?.FeelsLike}
-        />
-        <VisibilityCard
-          className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
-          title={weather?.Visibility}
-        />
+        <FeelsLike title={weather?.FeelsLike} />
+        <VisibilityCard title={weather?.Visibility} />
         <SunCard
-          className="bg-[#444444] text-white rounded-xl text-center aspect-[2/1]"
           image="Sunset"
           title="sunset"
           description={weather?.sunset}
