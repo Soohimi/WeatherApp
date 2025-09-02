@@ -28,7 +28,7 @@ function App() {
 
         {/* Center content area */}
         <div
-          className="flex-1 flex flex-col  justify-center  h-[calc(100vh-2.75rem)] mb-[2.75rem] m-2"
+          className="flex-1 flex flex-col justify-center  h-[calc(100vh-2.75rem)] mb-[2.75rem] m-2"
           dir="ltr"
         >
           {/* <CityInput
