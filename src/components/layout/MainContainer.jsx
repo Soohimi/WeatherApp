@@ -10,13 +10,13 @@ export default function MainContent() {
           <CurrentWeather />
         </section>
 
-        <section className="bg-[#1e1e1e] rounded-2xl p-4 h-[53.8%]">
+        <section className="bg-[#1e1e1e] rounded-2xl p-4">
           <OtherCountriesList />
         </section>
       </div>
 
       <div className="flex flex-col gap-4">
-        <section className="bg-[#1e1e1e] rounded-2xl h-[52.87%]">
+        <section className="bg-[#1e1e1e] rounded-2xl h-auto">
           <TodayHighlights />
         </section>
 

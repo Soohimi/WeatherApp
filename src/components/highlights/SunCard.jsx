@@ -4,7 +4,7 @@ import React from "react";
 
 function SunCard({ title, description, image }) {
   return (
-    <Card className="flex items-center w-full h-full bg-[#232323] text-white p-0.5 sm:p-1 md:p-2 lg:p-3 rounded-lg sm:rounded-xl md:rounded-2xl">
+    <Card className="flex items-center w-full bg-[#232323] text-white p-0.5 sm:p-1 md:p-2 lg:p-3 rounded-lg sm:rounded-xl md:rounded-2xl">
       <CardHeader className="flex items-center justify-center p-0 mr-0.5 sm:mr-1 md:mr-2 lg:mr-3">
         <Avatar className="h-4 w-4 sm:h-6 sm:w-6 md:h-8 md:w-8 lg:h-10 lg:w-10 xl:h-12 xl:w-12">
           <AvatarImage
