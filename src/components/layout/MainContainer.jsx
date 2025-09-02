@@ -1,15 +1,17 @@
+import CurrentWeather from "../currentweather/CurrentWeather";
 import TodayHighlights from "../highlights/TodayHighlights";
+import OtherCountriesList from "../countries/OtherCountriesList";
 
 export default function MainContent() {
   return (
     <main className="grid grid-cols-1 lg:grid-cols-2 gap-6 rounded-2xl flex-1 h-[45.75rem]">
       <div className="flex flex-col gap-6">
         <section className="bg-[#1e1e1e] rounded-2xl p-4 h-[42.9%]">
-          <h2 className="font-semibold mb-2">Current Weather</h2>
+          <CurrentWeather />
         </section>
 
         <section className="bg-[#1e1e1e] rounded-2xl p-4 h-[53.8%]">
-          <h2 className="font-semibold mb-2">Other Countries</h2>
+          <OtherCountriesList />
         </section>
       </div>
 

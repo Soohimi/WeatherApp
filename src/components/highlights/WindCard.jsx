@@ -42,9 +42,7 @@ function WindCard({ title }) {
         </CardDescription>
 
         <CardContent className="flex items-center justify-end">
-          <div className="text-xs text-gray-400 font-medium">
-            9:00 AM
-          </div>
+          <div className="text-xs text-gray-400 font-medium">9:00 AM</div>
         </CardContent>
       </Card>
     </>
