@@ -3,7 +3,6 @@ import React from "react";
 function CurrentWeather() {
   return (
     <div className="p-3">
-      {/* Top Bar */}
       <div className="flex justify-between items-center mb-4 flex-1">
         <div className="px-3 py-1.5 bg-neutral-700 rounded-xl inline-flex justify-center items-center gap-2">
           <div className="w-4 h-4 relative overflow-hidden">
@@ -26,9 +25,7 @@ function CurrentWeather() {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-6">
-        {/* Left Section - Day and Date */}
         <div className="flex flex-col">
           <div className="justify-start text-white text-3xl lg:text-4xl font-medium font-['Inter'] mb-2">
             Sunday
@@ -38,7 +35,6 @@ function CurrentWeather() {
           </div>
         </div>
 
-        {/* Center Section - Weather Icon */}
         <div className="flex-1 flex justify-center">
           <img
             src={"/assets/dark/sunny.svg"}
@@ -47,7 +43,6 @@ function CurrentWeather() {
           />
         </div>
 
-        {/* Right Section - Temperature and Conditions */}
         <div className="inline-flex flex-col justify-start items-start gap-5">
           <div className="flex flex-col justify-start items-end">
             <div className="self-stretch justify-start text-white text-3xl lg:text-4xl font-medium font-['Inter']">
