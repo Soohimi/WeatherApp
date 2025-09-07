@@ -19,18 +19,15 @@ function App() {
 
   return (
     <div className="h-screen bg-black text-white flex" dir="ltr">
-      <div>
+      <div className="my-11">
         <Sidebar />
       </div>
 
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col mt-8">
         <Header />
 
         {/* Center content area */}
-        <div
-          className="flex-1 flex flex-col justify-center  h-[calc(100vh-2.75rem)] mb-[2.75rem] m-2"
-          dir="ltr"
-        >
+        <div className="flex-1 mx-6 mb-11">
           {/* <CityInput
             city={city}
             setCity={setCity}

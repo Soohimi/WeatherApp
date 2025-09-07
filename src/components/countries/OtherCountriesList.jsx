@@ -3,72 +3,139 @@ import React from "react";
 function OtherCountriesList() {
   return (
     <>
-      <div className="overflow-hidden">
-        <div className="p-3 flex flex-row justify-between items-center">
-          <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white">
+      <div className="p-3 h-full">
+        <div className="flex justify-between items-center mb-4 flex-1">
+          <h2 className="font-semibold justify-between items-center">
             Other Countries
           </h2>
-          <h3>See All</h3>
+          <p className="justify-between items-center">See All</p>
         </div>
 
-        <div className="gap-4 flex flex-col jusify-between items-center px-3 pb-3">
-          <div class="self-stretch pl-4 pr-4 py-4 bg-neutral-800 rounded-3xl inline-flex jusify-end  items-center gap-24">
-            <div class="inline-flex flex-col justify-center items-start gap-2">
-              <div class="self-stretch justify-start text-zinc-400 text-sm font-normal font-['Inter']">
+        <div className="overflow-y-auto gap-2 flex flex-col h-[400px]">
+          <div className="flex gap-10 flex-row flex-1 bg-blue-900 p-4 rounded-2xl items-center justify-between">
+            <div>
+              <div className="text-zinc-400 text-xs sm:text-sm font-normal font-['Inter']">
                 Australia
               </div>
-              <div class="self-stretch justify-start text-white text-2xl font-normal font-['Inter']">
+              <div className="text-white text-lg sm:text-xl md:text-2xl font-normal font-['Inter']">
                 Canberra
               </div>
-              <div class="self-stretch justify-start text-white text-sm font-medium font-['Inter']">
+              <div className="text-white text-xs sm:text-sm font-medium font-['Inter']">
                 Sunny
               </div>
             </div>
-            <div class="w-16 h-16 relative">
+            <div>
               <img
-                class="w-16 h-16 left-[2px] top-[2.50px] absolute"
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg"
                 src="https://placehold.co/68x68"
+                alt="Weather icon"
               />
             </div>
-            <div class="text-center justify-start">
-              <span class="text-white text-2xl font-semibold font-['Inter']">
+            <div>
+              <span className="text-white text-lg sm:text-xl md:text-2xl font-semibold font-['Inter']">
                 32°
               </span>
-              <span class="text-white text-lg font-normal font-['Inter']">
+              <span className="text-white text-sm sm:text-base md:text-lg font-normal font-['Inter']">
                 /
               </span>
-              <span class="text-zinc-400 text-lg font-normal font-['Inter']">
+              <span className="text-zinc-400 text-sm sm:text-base md:text-lg font-normal font-['Inter']">
                 24°
               </span>
             </div>
           </div>
-          <div class="self-stretch pl-4 pr-4 py-4 bg-neutral-800 rounded-3xl inline-flex justify-start items-center gap-28">
-            <div class="inline-flex flex-col justify-center items-start gap-2">
-              <div class="self-stretch justify-start text-zinc-400 text-sm font-normal font-['Inter']">
-                Japan
+
+          <div className="flex flex-row flex-1 bg-blue-900 p-4 rounded-2xl items-center justify-between">
+            <div>
+              <div className="text-zinc-400 text-xs sm:text-sm font-normal font-['Inter']">
+                Iran
               </div>
-              <div class="self-stretch justify-start text-white text-2xl font-normal font-['Inter']">
-                Tokyo
+              <div className="text-white text-lg sm:text-xl md:text-2xl font-normal font-['Inter']">
+                Tehran
               </div>
-              <div class="self-stretch justify-start text-white text-sm font-medium font-['Inter']">
-                Mostly Sunny
+              <div className="text-white text-xs sm:text-sm font-medium font-['Inter']">
+                Sunny as hell
               </div>
             </div>
-            <div class="w-16 h-16 relative">
+            <div>
               <img
-                class="w-16 h-12 left-[2px] top-[11px] absolute"
-                src="https://placehold.co/69x51"
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg"
+                src="https://placehold.co/68x68"
+                alt="Weather icon"
               />
             </div>
-            <div class="text-center justify-start">
-              <span class="text-white text-2xl font-semibold font-['Inter']">
-                30°
+            <div>
+              <span className="text-white text-lg sm:text-xl md:text-2xl font-semibold font-['Inter']">
+                32°
               </span>
-              <span class="text-white text-lg font-normal font-['Inter']">
+              <span className="text-white text-sm sm:text-base md:text-lg font-normal font-['Inter']">
                 /
               </span>
-              <span class="text-zinc-400 text-lg font-normal font-['Inter']">
-                19°
+              <span className="text-zinc-400 text-sm sm:text-base md:text-lg font-normal font-['Inter']">
+                24°
+              </span>
+            </div>
+          </div>
+
+          <div className="flex gap-10 flex-row flex-1 bg-blue-900 p-4 rounded-2xl items-center justify-between">
+            <div>
+              <div className="text-zinc-400 text-xs sm:text-sm font-normal font-['Inter']">
+                Australia
+              </div>
+              <div className="text-white text-lg sm:text-xl md:text-2xl font-normal font-['Inter']">
+                Canberra
+              </div>
+              <div className="text-white text-xs sm:text-sm font-medium font-['Inter']">
+                Sunny
+              </div>
+            </div>
+            <div>
+              <img
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg"
+                src="https://placehold.co/68x68"
+                alt="Weather icon"
+              />
+            </div>
+            <div>
+              <span className="text-white text-lg sm:text-xl md:text-2xl font-semibold font-['Inter']">
+                32°
+              </span>
+              <span className="text-white text-sm sm:text-base md:text-lg font-normal font-['Inter']">
+                /
+              </span>
+              <span className="text-zinc-400 text-sm sm:text-base md:text-lg font-normal font-['Inter']">
+                24°
+              </span>
+            </div>
+          </div>
+
+          <div className="flex gap-10 flex-row flex-1 bg-blue-900 p-4 rounded-2xl items-center justify-between">
+            <div>
+              <div className="text-zinc-400 text-xs sm:text-sm font-normal font-['Inter']">
+                Australia
+              </div>
+              <div className="text-white text-lg sm:text-xl md:text-2xl font-normal font-['Inter']">
+                Canberra
+              </div>
+              <div className="text-white text-xs sm:text-sm font-medium font-['Inter']">
+                Sunny
+              </div>
+            </div>
+            <div>
+              <img
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg"
+                src="https://placehold.co/68x68"
+                alt="Weather icon"
+              />
+            </div>
+            <div>
+              <span className="text-white text-lg sm:text-xl md:text-2xl font-semibold font-['Inter']">
+                32°
+              </span>
+              <span className="text-white text-sm sm:text-base md:text-lg font-normal font-['Inter']">
+                /
+              </span>
+              <span className="text-zinc-400 text-sm sm:text-base md:text-lg font-normal font-['Inter']">
+                24°
               </span>
             </div>
           </div>

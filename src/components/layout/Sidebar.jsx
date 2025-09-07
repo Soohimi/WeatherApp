@@ -1,6 +1,6 @@
 export default function Sidebar() {
   return (
-    <div className="w-[5.25rem] h-[calc(100vh-5.5rem)] bg-gradient-to-b from-[#181818] to-[#1f1f1f] flex flex-col items-center mr-[1.5rem] ml-[2.75rem] my-[2.75rem] rounded-[2rem] border border-[#333333] shadow-2xl">
+    <div className="bg-gradient-to-b from-[#181818] to-[#1f1f1f] items-center rounded-[2rem] border border-[#333333] shadow-2xl flex flex-col flex-1 scratch h-full ml-11 p-2 ">
       <div className="h-[6.125rem] flex items-center justify-center group">
         <img
           src="/icons/sideBarIcons/ic_round-menu.svg"

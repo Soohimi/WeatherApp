@@ -4,7 +4,7 @@ function CurrentWeather() {
   return (
     <div className="p-3">
       {/* Top Bar */}
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex justify-between items-center mb-4 flex-1">
         <div className="px-3 py-1.5 bg-neutral-700 rounded-xl inline-flex justify-center items-center gap-2">
           <div className="w-4 h-4 relative overflow-hidden">
             <div className="w-3 h-4 left-[2.40px] top-[1.60px] absolute bg-white"></div>
