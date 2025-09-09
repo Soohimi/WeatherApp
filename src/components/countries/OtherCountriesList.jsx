@@ -3,7 +3,7 @@ import React from "react";
 function OtherCountriesList() {
   return (
     <>
-      <div className="p-3 h-full">
+      <div className="p-3 h-full overflow-hidden">
         <div className="flex justify-between items-center mb-4 flex-1">
           <h2 className="font-semibold justify-between items-center">
             Other Countries
@@ -11,7 +11,7 @@ function OtherCountriesList() {
           <p className="justify-between items-center">See All</p>
         </div>
 
-        <div className="overflow-y-auto gap-2 flex flex-col h-[400px]">
+        <div className="overflow-y-auto gap-2 flex flex-col">
           <div className="flex gap-10 flex-row flex-1 bg-blue-900 p-4 rounded-2xl items-center justify-between">
             <div>
               <div className="text-zinc-400 text-xs sm:text-sm font-normal font-['Inter']">

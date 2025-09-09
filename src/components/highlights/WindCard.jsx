@@ -34,7 +34,7 @@ function WindCard({ title }) {
             <span className="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-white">
               {title}
             </span>
-            <span className="text-xs sm:text-sm md:text-base text-gray-300 ml-1">
+            <span className="text-xs sm:text-sm md:text-base text-gray-300 pl-1">
               {" "}
               km/h
             </span>

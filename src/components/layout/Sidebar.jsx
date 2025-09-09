@@ -1,6 +1,6 @@
 export default function Sidebar() {
   return (
-    <div className="bg-gradient-to-b from-[#181818] to-[#1f1f1f] items-center rounded-[2rem] border border-[#333333] shadow-2xl flex flex-col flex-1 scratch h-full ml-11 p-2 ">
+    <div className="bg-gradient-to-b from-[#181818] to-[#1f1f1f] items-center rounded-[2rem] border border-[#333333] shadow-2xl flex flex-col flex-1 scratch h-full  p-2 ">
       <div className="h-[6.125rem] flex items-center justify-center group">
         <img
           src="/icons/sideBarIcons/ic_round-menu.svg"
@@ -11,7 +11,7 @@ export default function Sidebar() {
 
       <hr className="h-[0.125rem] w-[80%] border-0 bg-gradient-to-r from-transparent via-[#4A4949] to-transparent" />
 
-      <div className="flex-1 flex flex-col items-center justify-start gap-4 mt-4 px-2">
+      <div className="flex-1 flex flex-col items-center justify-start gap-4 pt-4 px-2">
         <img
           src="/icons/sideBarIcons/mage_dashboard-fill.svg"
           className="text-white p-2 rounded-xl cursor-pointer transition-all duration-200 hover:scale-110 hover:bg-[#333333] hover:rounded-2xl"

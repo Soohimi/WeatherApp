@@ -13,7 +13,7 @@ function HumidityCard({ title }) {
   return (
     <>
       <Card className="grid grid-rows-3 w-full bg-[#232323] text-white rounded-lg sm:rounded-xl md:rounded-2xl p-0.5 sm:p-1 md:p-2 lg:p-3">
-      <CardHeader className="flex flex-row items-center justify-around gap-0.5 w-full">
+        <CardHeader className="flex flex-row items-center justify-around gap-0.5 w-full">
           <Avatar>
             <AvatarImage
               src="/icons/Raindrops.svg"
@@ -27,10 +27,13 @@ function HumidityCard({ title }) {
         </CardHeader>
 
         <CardDescription className="flex items-center justify-end">
-          <span className="text-xs sm:text-sm md:text-base lg:text-lg font-bold">{title}</span>
-          <span className="text-xs sm:text-sm md:text-base text-gray-300 ml-1">
-              %
-            </span>        </CardDescription>
+          <span className="text-xs sm:text-sm md:text-base lg:text-lg font-bold">
+            {title}
+          </span>
+          <span className="text-xs sm:text-sm md:text-base text-gray-300 pl-1">
+            %
+          </span>{" "}
+        </CardDescription>
 
         <CardContent className="flex items-center justify-end">
           <div className="text-xs text-white text-center">Humidity is good</div>
