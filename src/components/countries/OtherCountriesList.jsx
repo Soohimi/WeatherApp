@@ -1,148 +1,87 @@
+// OtherCountriesList.jsx
+
 import React from "react";
 
-function OtherCountriesList() {
+// Dummy data - replace with your actual data from an API
+const countries = [
+  {
+    country: "Australia",
+    city: "Canberra",
+    condition: "Sunny",
+    tempHigh: 32,
+    tempLow: 24,
+    icon: "☀️",
+  },
+  {
+    country: "Japan",
+    city: "Tokyo",
+    condition: "Mostly Sunny",
+    tempHigh: 30,
+    tempLow: 19,
+    icon: "🌤️",
+  },
+  {
+    country: "United Kingdom",
+    city: "London",
+    condition: "Cloudy",
+    tempHigh: 18,
+    tempLow: 12,
+    icon: "☁️",
+  },
+  {
+    country: "Canada",
+    city: "Ottawa",
+    condition: "Snowing",
+    tempHigh: -2,
+    tempLow: -10,
+    icon: "❄️",
+  },
+  {
+    country: "Brazil",
+    city: "Brasília",
+    condition: "Thunderstorm",
+    tempHigh: 25,
+    tempLow: 18,
+    icon: "⛈️",
+  },
+];
+
+function CountryWeatherCard({ data }) {
   return (
-    <>
-      <div className="p-3 h-full overflow-hidden">
-        <div className="flex justify-between items-center mb-4 flex-1">
-          <h2 className="font-semibold justify-between items-center">
-            Other Countries
-          </h2>
-          <p className="justify-between items-center">See All</p>
-        </div>
-
-        <div className="overflow-y-auto gap-2 flex flex-col">
-          <div className="flex gap-10 flex-row flex-1 bg-blue-900 p-4 rounded-2xl items-center justify-between">
-            <div>
-              <div className="text-zinc-400 text-xs sm:text-sm font-normal font-['Inter']">
-                Australia
-              </div>
-              <div className="text-white text-lg sm:text-xl md:text-2xl font-normal font-['Inter']">
-                Canberra
-              </div>
-              <div className="text-white text-xs sm:text-sm font-medium font-['Inter']">
-                Sunny
-              </div>
-            </div>
-            <div>
-              <img
-                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg"
-                src="https://placehold.co/68x68"
-                alt="Weather icon"
-              />
-            </div>
-            <div>
-              <span className="text-white text-lg sm:text-xl md:text-2xl font-semibold font-['Inter']">
-                32°
-              </span>
-              <span className="text-white text-sm sm:text-base md:text-lg font-normal font-['Inter']">
-                /
-              </span>
-              <span className="text-zinc-400 text-sm sm:text-base md:text-lg font-normal font-['Inter']">
-                24°
-              </span>
-            </div>
-          </div>
-
-          <div className="flex flex-row flex-1 bg-blue-900 p-4 rounded-2xl items-center justify-between">
-            <div>
-              <div className="text-zinc-400 text-xs sm:text-sm font-normal font-['Inter']">
-                Iran
-              </div>
-              <div className="text-white text-lg sm:text-xl md:text-2xl font-normal font-['Inter']">
-                Tehran
-              </div>
-              <div className="text-white text-xs sm:text-sm font-medium font-['Inter']">
-                Sunny as hell
-              </div>
-            </div>
-            <div>
-              <img
-                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg"
-                src="https://placehold.co/68x68"
-                alt="Weather icon"
-              />
-            </div>
-            <div>
-              <span className="text-white text-lg sm:text-xl md:text-2xl font-semibold font-['Inter']">
-                32°
-              </span>
-              <span className="text-white text-sm sm:text-base md:text-lg font-normal font-['Inter']">
-                /
-              </span>
-              <span className="text-zinc-400 text-sm sm:text-base md:text-lg font-normal font-['Inter']">
-                24°
-              </span>
-            </div>
-          </div>
-
-          <div className="flex gap-10 flex-row flex-1 bg-blue-900 p-4 rounded-2xl items-center justify-between">
-            <div>
-              <div className="text-zinc-400 text-xs sm:text-sm font-normal font-['Inter']">
-                Australia
-              </div>
-              <div className="text-white text-lg sm:text-xl md:text-2xl font-normal font-['Inter']">
-                Canberra
-              </div>
-              <div className="text-white text-xs sm:text-sm font-medium font-['Inter']">
-                Sunny
-              </div>
-            </div>
-            <div>
-              <img
-                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg"
-                src="https://placehold.co/68x68"
-                alt="Weather icon"
-              />
-            </div>
-            <div>
-              <span className="text-white text-lg sm:text-xl md:text-2xl font-semibold font-['Inter']">
-                32°
-              </span>
-              <span className="text-white text-sm sm:text-base md:text-lg font-normal font-['Inter']">
-                /
-              </span>
-              <span className="text-zinc-400 text-sm sm:text-base md:text-lg font-normal font-['Inter']">
-                24°
-              </span>
-            </div>
-          </div>
-
-          <div className="flex gap-10 flex-row flex-1 bg-blue-900 p-4 rounded-2xl items-center justify-between">
-            <div>
-              <div className="text-zinc-400 text-xs sm:text-sm font-normal font-['Inter']">
-                Australia
-              </div>
-              <div className="text-white text-lg sm:text-xl md:text-2xl font-normal font-['Inter']">
-                Canberra
-              </div>
-              <div className="text-white text-xs sm:text-sm font-medium font-['Inter']">
-                Sunny
-              </div>
-            </div>
-            <div>
-              <img
-                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg"
-                src="https://placehold.co/68x68"
-                alt="Weather icon"
-              />
-            </div>
-            <div>
-              <span className="text-white text-lg sm:text-xl md:text-2xl font-semibold font-['Inter']">
-                32°
-              </span>
-              <span className="text-white text-sm sm:text-base md:text-lg font-normal font-['Inter']">
-                /
-              </span>
-              <span className="text-zinc-400 text-sm sm:text-base md:text-lg font-normal font-['Inter']">
-                24°
-              </span>
-            </div>
-          </div>
-        </div>
+    <div className="grid grid-cols-3 items-center self-stretch rounded-2xl bg-neutral-800 p-3">
+      {/* Column 1: Text */}
+      <div className="flex flex-col items-start justify-center">
+        <div className="text-sm text-zinc-400">{data.country}</div>
+        <div className="text-xl font-medium text-white">{data.city}</div>
+        <div className="text-sm text-white">{data.condition}</div>
       </div>
-    </>
+      {/* Column 2: Icon */}
+      <div className="flex justify-center items-center text-4xl">
+        {data.icon}
+        {/* Or use an <img /> tag with a real icon */}
+      </div>
+      {/* Column 3: Temperature */}
+      <div className="flex items-center justify-end text-xl font-semibold">
+        <span className="text-white">{data.tempHigh}°</span>
+        <span className="text-zinc-400 font-normal">/{data.tempLow}°</span>
+      </div>
+    </div>
   );
 }
 
-export default OtherCountriesList;
+export default function OtherCountriesList() {
+  return (
+    <div className="flex h-full flex-col overflow-hidden">
+      <div className="mb-4 flex items-center justify-between">
+        <h2 className="font-semibold">Other Countries</h2>
+        <p className="text-sm text-zinc-400 cursor-pointer">See All</p>
+      </div>
+      {/* This div will now scroll perfectly */}
+      <div className="flex flex-1 flex-col gap-3 overflow-y-auto pr-2">
+        {countries.map((country, index) => (
+          <CountryWeatherCard key={index} data={country} />
+        ))}
+      </div>
+    </div>
+  );
+}

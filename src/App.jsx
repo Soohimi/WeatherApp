@@ -30,7 +30,7 @@ function App() {
         <Header />
 
         {/* Center content area */}
-        <div className="flex-1 pb-8">
+        <div className="flex-1 overflow-hidden">
           {/* <CityInput
             city={city}
             setCity={setCity}
