@@ -1,7 +1,6 @@
-// src/components/currentweather/CurrentWeather.jsx
-
 import React, { useEffect } from "react";
 import useWeather from "../../hooks/useWeather";
+import { ICON_MAP, DEFAULT_ICON } from "../../utils/IconMap";
 
 function CurrentWeather() {
   const { weather, loading, error, fetchWeather } = useWeather();
@@ -10,13 +9,11 @@ function CurrentWeather() {
     fetchWeather("Dhaka");
   }, []);
 
-  // Handle loading, error, and initial states
   if (loading) return <div className="p-3 text-center">Loading...</div>;
   if (error) return <div className="p-3 text-center text-red-500">{error}</div>;
   if (!weather)
     return <div className="p-3 text-center">Enter a city to begin.</div>;
 
-  // Format the current date
   const currentDate = new Date();
   const dayOfWeek = currentDate.toLocaleDateString("en-US", {
     weekday: "long",
@@ -48,8 +45,9 @@ function CurrentWeather() {
         </div>
 
         <div className="flex-1 flex justify-center">
+          {/* 2. Change the src attribute to use your icon map */}
           <img
-            src={`https://openweathermap.org/img/wn/${weather.icon}@4x.png`}
+            src={ICON_MAP[weather.icon] || DEFAULT_ICON}
             alt={weather.description}
             className="w-20 h-20 lg:w-24 lg:h-24"
           />
