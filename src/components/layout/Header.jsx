@@ -2,7 +2,7 @@ import SearchIcon from "../Search";
 
 export default function Header() {
   return (
-    <div className="flex justify-between items-center px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-black text-white w-full">
+    <div className="flex justify-between items-center pt-2 sm:pt-3 md:pt-4 bg-black text-white w-full">
       <div>
         <h1 className="text-xs sm:text-sm md:text-base text-slate-300">
           Hi, Soheil!

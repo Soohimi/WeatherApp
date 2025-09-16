@@ -45,11 +45,10 @@ function CurrentWeather() {
         </div>
 
         <div className="flex-1 flex justify-center">
-          {/* 2. Change the src attribute to use your icon map */}
           <img
             src={ICON_MAP[weather.icon] || DEFAULT_ICON}
             alt={weather.description}
-            className="w-20 h-20 lg:w-24 lg:h-24"
+            className="w-35 h-35 lg:w-40 lg:h-40"
           />
         </div>
 
