@@ -1,5 +1,3 @@
-// src/components/layout/MainContainer.jsx
-
 import CurrentWeather from "../currentweather/CurrentWeather";
 import TodayHighlights from "../highlights/TodayHighlights";
 import TenDayForecast from "../forecast/DayForecast";
