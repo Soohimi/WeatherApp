@@ -1,17 +1,19 @@
 import {
   Card,
   CardHeader,
-  CardFooter,
   CardTitle,
   CardDescription,
   CardContent,
 } from "../ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar.jsx";
 import React from "react";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 function WindCard({ title }) {
-  return (
-    <>
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+
+  if (isDesktop) {
+    return (
       <Card className="grid grid-rows-3 w-full bg-[#232323] text-white rounded-lg sm:rounded-xl md:rounded-2xl p-0.5 sm:p-1 md:p-2 lg:p-3">
         <CardHeader className="flex flex-row items-center justify-center gap-2 w-full">
           <Avatar>
@@ -28,7 +30,6 @@ function WindCard({ title }) {
             Wind Status
           </CardTitle>
         </CardHeader>
-
         <CardDescription className="flex items-center justify-center">
           <div className="text-white text-center">
             <span className="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-white">
@@ -40,13 +41,27 @@ function WindCard({ title }) {
             </span>
           </div>
         </CardDescription>
-
         <CardContent className="flex items-center justify-center">
           <div className="text-xs text-gray-400 font-medium">9:00 AM</div>
         </CardContent>
       </Card>
-    </>
-  );
+    );
+  } else {
+    return (
+      <Card className="flex flex-col items-center justify-center gap-2 w-full h-full bg-[#232323] text-white rounded-2xl p-3">
+        <div className="flex items-center gap-2 text-zinc-400">
+          <Avatar className="h-4 w-4">
+            <AvatarImage src="/icons/Visibility Icon 1.svg" alt="Wind image" />
+          </Avatar>
+          <CardTitle className="text-sm">Wind Status</CardTitle>
+        </div>
+        <div className="text-2xl font-bold">
+          {title} <span className="text-base font-normal">km/h</span>
+        </div>
+        <div className="text-xs text-gray-400">9:00 AM</div>
+      </Card>
+    );
+  }
 }
 
 export default WindCard;

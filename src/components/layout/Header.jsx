@@ -1,10 +1,20 @@
-import SearchIcon from "../Search";
+import React, { useState } from "react";
 
-export default function Header() {
+export default function Header({ onSearch, onMenuClick }) {
+  const [city, setCity] = useState("");
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (city.trim()) {
+      onSearch(city.trim());
+      setCity("");
+    }
+  };
+
   return (
     <header className="flex justify-between items-center pt-2 sm:pt-3 md:pt-4 bg-black text-white w-full">
       <div className="flex items-center gap-4">
-        <button className="lg:hidden text-white">
+        <button className="lg:hidden text-white" onClick={onMenuClick}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -31,8 +41,7 @@ export default function Header() {
         </div>
       </div>
       <div className="flex gap-2 sm:gap-3 md:gap-4 items-center">
-        <SearchIcon />
-        <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full overflow-hidden">
+        <div className="w-12 h-12 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full overflow-hidden">
           <img src="/icons/Profile.svg" alt="profile" />
         </div>
       </div>

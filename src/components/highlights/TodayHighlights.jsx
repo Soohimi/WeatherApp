@@ -4,8 +4,11 @@ import WindCard from "./WindCard";
 import UVIndexCard from "./UVIndexCard";
 import HumidityCard from "./HumidityCard";
 import VisibilityCard from "./VisibilityCard";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 function TodayHighlights({ weather }) {
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
+
   if (!weather) {
     return (
       <div className="flex h-full flex-col p-6">
@@ -17,34 +20,59 @@ function TodayHighlights({ weather }) {
     );
   }
 
-  return (
-    <div className="flex h-full flex-col">
-      <div className="pl-2 sm:pl-4 md:pl-6 pt-2 sm:pt-4 md:pt-6">
-        <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white">
+  if (isDesktop) {
+    return (
+      <div className="flex h-full flex-col">
+        <div className="pl-2 sm:pl-4 md:pl-6 pt-2 sm:pt-4 md:pt-6">
+          <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white">
+            Today's Highlights
+          </h2>
+        </div>
+        <div
+          className="grid flex-1 gap-0.5 sm:gap-1 md:gap-2 lg:gap-3 p-1 sm:p-2 md:p-3 lg:p-4"
+          style={{
+            gridTemplateColumns: "1fr 1fr 1.5fr",
+            gridTemplateRows: "1fr 1fr",
+          }}
+        >
+          <WindCard title={weather?.windSpeed} />
+          <HumidityCard title={weather?.humidity} />
+          <SunCard
+            image="Sunrise"
+            title="sunrise"
+            description={weather?.sunrise}
+          />
+          <UVIndexCard value={weather?.uvi} />
+          <VisibilityCard title={weather?.visibility} />
+          <SunCard
+            image="Sunset"
+            title="sunset"
+            description={weather?.sunset}
+          />
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div className="flex h-full flex-col p-4">
+        <h2 className="text-xl font-bold text-white mb-4">
           Today's Highlights
         </h2>
+        <div className="grid grid-cols-2 gap-4 flex-1">
+          <WindCard title={weather.windSpeed} />
+          <HumidityCard title={weather.humidity} />
+          <UVIndexCard value={weather.uvi} />
+          <VisibilityCard title={weather.visibility} />
+          <SunCard
+            image="Sunrise"
+            title="Sunrise"
+            description={weather.sunrise}
+          />
+          <SunCard image="Sunset" title="Sunset" description={weather.sunset} />
+        </div>
       </div>
-
-      <div
-        className="grid flex-1 gap-0.5 sm:gap-1 md:gap-2 lg:gap-3 p-1 sm:p-2 md:p-3 lg:p-4"
-        style={{
-          gridTemplateColumns: "1fr 1fr 1.5fr",
-          gridTemplateRows: "1fr 1fr",
-        }}
-      >
-        <WindCard title={weather?.windSpeed} />
-        <HumidityCard title={weather?.humidity} />
-        <SunCard
-          image="Sunrise"
-          title="sunrise"
-          description={weather?.sunrise}
-        />
-        <UVIndexCard value={weather?.uvi} />{" "}
-        <VisibilityCard title={weather?.visibility} />
-        <SunCard image="Sunset" title="sunset" description={weather?.sunset} />
-      </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default TodayHighlights;
