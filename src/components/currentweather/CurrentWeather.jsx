@@ -1,18 +1,26 @@
+// src/components/currentweather/CurrentWeather.jsx
+
 import React, { useEffect } from "react";
 import useWeather from "../../hooks/useWeather";
-import { ICON_MAP, DEFAULT_ICON } from "../../utils/IconMap";
+import { ICON_MAP, DEFAULT_ICON } from "../../utils/IconMap.js";
 
 function CurrentWeather() {
-  const { weather, loading, error, fetchWeather } = useWeather();
+  const { weather, loading, error, fetchWeatherForCurrentUserLocation } =
+    useWeather();
 
   useEffect(() => {
-    fetchWeather("Dhaka");
+    fetchWeatherForCurrentUserLocation();
   }, []);
 
-  if (loading) return <div className="p-3 text-center">Loading...</div>;
+  if (loading)
+    return <div className="p-3 text-center">Getting your location...</div>;
   if (error) return <div className="p-3 text-center text-red-500">{error}</div>;
   if (!weather)
-    return <div className="p-3 text-center">Enter a city to begin.</div>;
+    return (
+      <div className="p-3 text-center">
+        Please allow location access to see your weather.
+      </div>
+    );
 
   const currentDate = new Date();
   const dayOfWeek = currentDate.toLocaleDateString("en-US", {
@@ -33,7 +41,6 @@ function CurrentWeather() {
           </div>
         </div>
       </div>
-
       <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-6">
         <div className="flex flex-col">
           <div className="justify-start text-white text-3xl lg:text-4xl font-medium pb-2">
@@ -43,7 +50,6 @@ function CurrentWeather() {
             {formattedDate}
           </div>
         </div>
-
         <div className="flex-1 flex justify-center">
           <img
             src={ICON_MAP[weather.icon] || DEFAULT_ICON}
@@ -51,7 +57,6 @@ function CurrentWeather() {
             className="w-35 h-35 lg:w-40 lg:h-40"
           />
         </div>
-
         <div className="inline-flex flex-col justify-start items-start gap-5">
           <div className="flex flex-col justify-start items-end">
             <div className="self-stretch justify-start text-white text-3xl lg:text-4xl font-medium">
