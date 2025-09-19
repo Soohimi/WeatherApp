@@ -101,14 +101,14 @@ function useWeather() {
         if (city) {
           fetchWeather(city);
         } else {
-          setError("Could not determine location. Showing London instead.");
-          fetchWeather("London");
+          setError("Could not determine location. Showing Tehran instead.");
+          fetchWeather("Tehran");
         }
       })
       .catch((err) => {
         console.error("IP Geolocation failed:", err);
-        setError("Could not get location. Showing London instead.");
-        fetchWeather("London");
+        setError("Could not get location. Showing Tehran instead.");
+        fetchWeather("Tehran");
       });
   };
 
