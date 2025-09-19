@@ -13,7 +13,7 @@ function WindCard({ title }) {
   return (
     <>
       <Card className="grid grid-rows-3 w-full bg-[#232323] text-white rounded-lg sm:rounded-xl md:rounded-2xl p-0.5 sm:p-1 md:p-2 lg:p-3">
-        <CardHeader className="flex flex-row items-center justify-around gap-0.5 w-full">
+        <CardHeader className="flex flex-row items-center justify-center gap-2 w-full">
           <Avatar>
             <AvatarImage
               src="/icons/Visibility Icon 1.svg"
@@ -29,7 +29,7 @@ function WindCard({ title }) {
           </CardTitle>
         </CardHeader>
 
-        <CardDescription className="flex items-center justify-end">
+        <CardDescription className="flex items-center justify-center">
           <div className="text-white text-center">
             <span className="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-white">
               {title}
@@ -41,7 +41,7 @@ function WindCard({ title }) {
           </div>
         </CardDescription>
 
-        <CardContent className="flex items-center justify-end">
+        <CardContent className="flex items-center justify-center">
           <div className="text-xs text-gray-400 font-medium">9:00 AM</div>
         </CardContent>
       </Card>

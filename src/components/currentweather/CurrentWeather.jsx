@@ -1,5 +1,3 @@
-// src/components/currentweather/CurrentWeather.jsx
-
 import React, { useEffect } from "react";
 import useWeather from "../../hooks/useWeather";
 import { ICON_MAP, DEFAULT_ICON } from "../../utils/IconMap.js";

@@ -3,7 +3,7 @@ export const ICON_MAP = {
   "01d": "/icons/weather/sunny.svg",
 
   // --- Clear Night ---
-  "01n": "/icons/weather/clear.svg",
+  "01n": "/icons/weather/sunny.svg",
 
   // --- Partly Cloudy ---
   "02d": "/icons/weather/cloudy.svg",

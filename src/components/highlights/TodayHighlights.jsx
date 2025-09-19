@@ -1,15 +1,21 @@
-// src/components/highlights/TodayHighlights.jsx
-
 import React from "react";
 import SunCard from "./SunCard";
 import WindCard from "./WindCard";
-import FeelsLike from "./FeelsLike";
+import UVIndexCard from "./UVIndexCard";
 import HumidityCard from "./HumidityCard";
-import useWeather from "../../hooks/useWeather";
 import VisibilityCard from "./VisibilityCard";
 
-function TodayHighlights() {
-  const { weather } = useWeather();
+function TodayHighlights({ weather }) {
+  if (!weather) {
+    return (
+      <div className="flex h-full flex-col p-6">
+        <h2 className="text-2xl font-bold text-white">Today's Highlights</h2>
+        <div className="flex-1 flex items-center justify-center">
+          <p className="text-zinc-400">Loading highlights...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex h-full flex-col">
@@ -33,8 +39,8 @@ function TodayHighlights() {
           title="sunrise"
           description={weather?.sunrise}
         />
-        <FeelsLike title={weather?.FeelsLike} />
-        <VisibilityCard title={weather?.Visibility} />
+        <UVIndexCard value={weather?.uvi} />{" "}
+        <VisibilityCard title={weather?.visibility} />
         <SunCard image="Sunset" title="sunset" description={weather?.sunset} />
       </div>
     </div>
