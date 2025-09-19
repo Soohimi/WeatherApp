@@ -1,42 +1,48 @@
-// src/components/forecast/TenDayForecast.jsx
-
 import React from "react";
+import { ICON_MAP, DEFAULT_ICON } from "../../utils/IconMap";
 
-const forecastData = [
-  { day: "Today", icon: "🌧️", temp: 28 },
-  { day: "Mon", icon: "🌤️", temp: 31 },
-  { day: "Tue", icon: "🌧️", temp: 27 },
-  { day: "Wed", icon: "🌦️", temp: 29 },
-  { day: "Thu", icon: "☀️", temp: 32 },
-  { day: "Fri", icon: "☀️", temp: 32 },
-  { day: "Sat", icon: "☀️", temp: 32 },
-];
+function ForecastDayCard({ dayData }) {
+  const dayOfWeek = new Date(dayData.dt * 1000).toLocaleDateString("en-US", {
+    weekday: "short",
+  });
 
-function ForecastDayCard({ data }) {
   return (
     <div className="flex w-28 flex-shrink-0 flex-col items-center justify-around rounded-3xl border border-white/20 bg-[#232323] p-4">
-      <p className="font-medium text-zinc-200">{data.day}</p>
+      <p className="font-medium text-zinc-200">{dayOfWeek}</p>
       <hr className="h-[0.125rem] w-[80%] border-0 bg-gradient-to-r from-transparent via-[#4A4949] to-transparent" />
-      <span className="text-4xl drop-shadow-lg">{data.icon}</span>
-      <p className="text-xl font-semibold">{data.temp}°C</p>
+
+      <img
+        src={ICON_MAP[dayData.weather[0].icon] || DEFAULT_ICON}
+        alt={dayData.weather[0].description}
+        className="w-12 h-12"
+      />
+
+      <p className="text-xl font-semibold">{Math.round(dayData.temp.day)}°C</p>
     </div>
   );
 }
 
-// This is the new, self-contained component
-export default function TenDayForecast() {
-  return (
-    // The main component wrapper is now a flex column
-    <div className="flex h-full flex-col w-full overflow-hidden">
-      {/* 1. The Title is now inside this component */}
-      <h2 className="mb-4 flex-shrink-0 font-semibold">10 Day Forecast</h2>
+export default function TenDayForecast({ weather }) {
+  if (!weather || !weather.dailyForecast) {
+    return (
+      <div className="flex h-full flex-col">
+        <h2 className="mb-4 flex-shrink-0 font-semibold">8-Day Forecast</h2>
+        <div className="flex-1 flex items-center justify-center">
+          <p className="text-zinc-400">Loading forecast...</p>
+        </div>
+      </div>
+    );
+  }
 
-      {/* 2. A new wrapper to correctly handle the remaining vertical space */}
+  const forecastToDisplay = weather.dailyForecast.slice(0, 8);
+
+  return (
+    <div className="flex h-full flex-col">
+      <h2 className="mb-4 flex-shrink-0 font-semibold">8-Day Forecast</h2>
       <div className="flex-1 overflow-hidden">
-        {/* 3. The scrolling container takes the full height of the wrapper */}
-        <div className="flex h-full gap-4 overflow-x-auto pb-3">
-          {forecastData.map((day, index) => (
-            <ForecastDayCard key={index} data={day} />
+        <div className="flex h-full items-stretch gap-4 overflow-x-auto pb-3">
+          {forecastToDisplay.map((day, index) => (
+            <ForecastDayCard key={index} dayData={day} />
           ))}
         </div>
       </div>

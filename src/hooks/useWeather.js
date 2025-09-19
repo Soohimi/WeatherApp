@@ -2,28 +2,71 @@ import { useState } from "react";
 import axios from "axios";
 import { countryNames } from "../components/countryNames";
 
+const generateFakeForecast = (currentWeather) => {
+  const forecast = [];
+  const today = new Date();
+  const weatherTypes = [
+    { icon: "01d", description: "Clear Sky" },
+    { icon: "02d", description: "Few Clouds" },
+    { icon: "03d", description: "Scattered Clouds" },
+    { icon: "10d", description: "Rain" },
+  ];
+
+  forecast.push({
+    dt: today.getTime() / 1000,
+    temp: { day: currentWeather.main.temp },
+    weather: [
+      {
+        icon: currentWeather.weather[0].icon,
+        description: currentWeather.weather[0].description,
+      },
+    ],
+  });
+
+  for (let i = 1; i <= 7; i++) {
+    const nextDay = new Date();
+    nextDay.setDate(today.getDate() + i);
+
+    const randomWeather =
+      weatherTypes[Math.floor(Math.random() * weatherTypes.length)];
+
+    forecast.push({
+      dt: nextDay.getTime() / 1000,
+      temp: { day: currentWeather.main.temp + (Math.random() * 6 - 3) },
+      weather: [
+        {
+          icon: randomWeather.icon,
+          description: randomWeather.description,
+        },
+      ],
+    });
+  }
+  return forecast;
+};
+
 const processWeatherData = (data) => {
-  const countryCode = data.sys?.country;
+  const countryCode = data.sys.country;
   return {
     city: data.name,
     country: countryNames[countryCode] || countryCode,
-    temp: data.main?.temp,
-    icon: data.weather?.[0]?.icon || null,
-    description: data.weather?.[0]?.description || "N/A",
-    sunrise: new Date(data.sys?.sunrise * 1000).toLocaleTimeString([], {
+    temp: data.main.temp,
+    icon: data.weather[0].icon,
+    description: data.weather[0].description,
+    sunrise: new Date(data.sys.sunrise * 1000).toLocaleTimeString([], {
       hour: "2-digit",
       minute: "2-digit",
     }),
-    sunset: new Date(data.sys?.sunset * 1000).toLocaleTimeString([], {
+    sunset: new Date(data.sys.sunset * 1000).toLocaleTimeString([], {
       hour: "2-digit",
       minute: "2-digit",
     }),
-    feelsLike: data.main?.feels_like,
-    humidity: data.main?.humidity,
+    feelsLike: data.main.feels_like,
+    humidity: data.main.humidity,
     visibility: (data.visibility / 1000).toFixed(1),
-    windSpeed: (data.wind?.speed * 3.6).toFixed(1),
+    windSpeed: (data.wind.speed * 3.6).toFixed(1),
     uvi: Math.round(Math.random() * 12),
-    dailyForecast: [],
+
+    dailyForecast: generateFakeForecast(data),
   };
 };
 

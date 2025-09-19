@@ -21,7 +21,7 @@ export default function MainContent({ weather, loading, error }) {
         </section>
 
         <section className="flex flex-1 flex-col overflow-hidden rounded-2xl bg-[#1e1e1e] p-4">
-          <TenDayForecast />
+          <TenDayForecast weather={weather} />
         </section>
       </div>
     </main>
