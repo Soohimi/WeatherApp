@@ -33,10 +33,10 @@ export default function Header({ onSearch, onMenuClick }) {
         </button>
         <div>
           <h1 className="text-xs sm:text-sm md:text-base text-slate-300">
-            Hi, Soheil!
+            Hi, Welcome!
           </h1>
           <p className="text-base sm:text-lg md:text-xl font-semibold">
-            Good Morning
+            I hope you'll have a great day
           </p>
         </div>
       </div>
